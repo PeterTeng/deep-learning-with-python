@@ -7,12 +7,16 @@ import numpy as np
 
 # print(multiple)
 
-X = np.array([1, 2])
+X = np.array([1.0, 0.5])
 print(X)
 
-W = np.array([[1, 3, 5], [2, 4, 6]])
-print(W)
+W1 = np.array([[0.1, 0.3, 0.5], [0.2, 0.4, 0.6]])
+B1 = np.array([0.1, 0.2, 0.3]) # Bias
+print(W1)
+print(B1)
 
-Y = np.dot(X, W)
+print("XW + B = ")
+
+Y = np.dot(X, W1) + B1
 
 print(Y)
