@@ -1,11 +1,7 @@
 import numpy as np
 
-# A = np.array([[1, 2], [3, 4]])
-# B = np.array([[5, 6], [7, 8]])
-
-# multiple = np.dot(A, B)
-
-# print(multiple)
+def sigmoid(x):
+    return 1 / (1 + np.exp(-x))
 
 X = np.array([1.0, 0.5])
 print(X)
@@ -15,8 +11,10 @@ B1 = np.array([0.1, 0.2, 0.3]) # Bias
 print(W1)
 print(B1)
 
-print("XW + B = ")
+print("A1 = XW1 + B1 = ")
+A1 = np.dot(X, W1) + B1
+print(A1)
 
-Y = np.dot(X, W1) + B1
-
-print(Y)
+Z1 = sigmoid(A1)
+print("Z1 = ")
+print(Z1)
